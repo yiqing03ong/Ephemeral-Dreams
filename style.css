@@ -5,17 +5,42 @@
 }
 
 body {
-  background-color: #1a1a1a;
+  background-color: #000;
 }
+
+.scene {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  /* tall enough to give scroll room for the parallax */
+  height: 200vh;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+}
+
+/* stacking order: sunset at back, sun above it, ocean above sun, title card on top */
+.sunset { z-index: 1; }
+.sun    { z-index: 2; }
+.ocean  { z-index: 3; }
+.titlecard { z-index: 4; }
 
 .comic-strip {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.comic-strip img {
+.comic-strip img,
+.comic-strip video {
   width: 100%;
-  max-width: 800px;  /* keeps it readable on wide screens */
   display: block;
 }
