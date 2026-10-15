@@ -8,6 +8,6 @@ window.addEventListener('scroll', () => {
   titleCard.style.transform = `translateX(${-scrollY * 1.5}px)`;
 
   // sun drops down, stops near the bottom of the title card area
-  const sunDrop = Math.min(scrollY * 3.0, 1600);
+  const sunDrop = Math.min(scrollY * 3.0, 1700);
   sun.style.transform = `translateY(${sunDrop}px)`;
 });
