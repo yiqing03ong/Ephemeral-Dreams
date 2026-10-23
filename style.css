@@ -13,8 +13,9 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  /* tall enough to give scroll room for the parallax */
-  height: 200vh;
+  /* aspect ratio of your images: 4720 tall / 1640 wide = 2.878 */
+  padding-bottom: 287.8%;
+  height: 0;
 }
 
 .layer {
