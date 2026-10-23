@@ -13,9 +13,6 @@ body {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  /* aspect ratio of your images: 4720 tall / 1640 wide = 2.878 */
-  padding-bottom: 287.8%;
-  height: 0;
 }
 
 .layer {
@@ -26,8 +23,12 @@ body {
   display: block;
 }
 
-/* stacking order: sunset at back, sun above it, ocean above sun, title card on top */
-.sunset { z-index: 1; }
+/* make the sunset image sit in normal flow to define the scene height */
+.sunset {
+  position: relative;
+  z-index: 1;
+}
+
 .sun    { z-index: 2; }
 .ocean  { z-index: 3; }
 .titlecard { z-index: 4; }
