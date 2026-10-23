@@ -31,7 +31,26 @@ body {
 
 .sun    { z-index: 2; }
 .ocean  { z-index: 3; }
-.titlecard { z-index: 4; }
+.titlecard { z-index: 4; } 
+
+.panel-2-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+.panel-2-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.fish-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateX(-100%); /* starts fully off screen to the left */
+}
 
 .comic-strip {
   display: flex;
